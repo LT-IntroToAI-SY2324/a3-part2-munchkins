@@ -20,4 +20,29 @@ def get_winner(game: Tuple[int, str, int, str, str]) -> str:
 def get_score(game: Tuple[int, str, int, str, str]) -> int:
     return game[4]
 
-def 
+def winner_by_year(matches: List[str]) -> str:
+    input_year = matches[0]
+    for game in games_db:
+        if get_year(game) == input_year:
+            return get_winner(game)
+
+def city_by_year(matches: List[str]) -> str:
+    input_year = matches[0]
+    for game in games_db:
+        if get_year(game) == input_year:
+            return get_city(game)
+
+def attendance_by_year(matches: List[str]) -> int:
+    input_year = matches[0]
+    for game in games_db:
+        if get_year(game) == input_year:
+            return get_attendance(game)
+
+def score_by_year(matches: List[str]) -> str:
+    input_year = matches[0]
+    for game in games_db:
+        if get_year(game) == input_year:
+            return get_score(game)
+
+assert winner_by_year(["2000"]) == "St.Louis Rams", "winner_by_year not working"
+print("all tests passed")
