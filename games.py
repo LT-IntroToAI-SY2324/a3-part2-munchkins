@@ -21,5 +21,11 @@ games_db: List[Tuple[int, str, int, str, str]] = [
         72922,
         "New England Patriots",
         "20-17"
+    ),
+    (
+        2003,
+        "San Diego",
+        67603,
+        
     )
 ]
