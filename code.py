@@ -84,4 +84,7 @@ def query_loop() -> None:
 
 
 assert winner_by_year(["2000"]) == "St.Louis Rams", "winner_by_year not working"
+assert city_by_year(["2007"]) == "Miami", "city_by_year not working"
+assert attendance_by_year(["2016"]) == 71088, "atendance_by_year not working"
+assert score_by_year(["2021"]) == "31-9", "score_by_year not working"
 print("all tests passed")
