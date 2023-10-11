@@ -21,25 +21,25 @@ def get_score(game: Tuple[int, str, int, str, str]) -> int:
     return game[4]
 
 def winner_by_year(matches: List[str]) -> str:
-    input_year = matches[0]
+    input_year = int(matches[0])
     for game in games_db:
         if get_year(game) == input_year:
             return get_winner(game)
 
 def city_by_year(matches: List[str]) -> str:
-    input_year = matches[0]
+    input_year = int(matches[0])
     for game in games_db:
         if get_year(game) == input_year:
             return get_city(game)
 
 def attendance_by_year(matches: List[str]) -> int:
-    input_year = matches[0]
+    input_year = int(matches[0])
     for game in games_db:
         if get_year(game) == input_year:
             return get_attendance(game)
 
 def score_by_year(matches: List[str]) -> str:
-    input_year = matches[0]
+    input_year = int(matches[0])
     for game in games_db:
         if get_year(game) == input_year:
             return get_score(game)
