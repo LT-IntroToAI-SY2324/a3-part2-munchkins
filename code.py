@@ -21,7 +21,7 @@ def get_score(game: Tuple[int, str, int, str, str]) -> int:
     return game[4]
 
 def winner_by_year(matches: List[str]) -> str:
-    input_year = matches[0]
+    input_year = int(matches[0])
     for game in games_db:
         if get_year(game) == input_year:
             return get_winner(game)

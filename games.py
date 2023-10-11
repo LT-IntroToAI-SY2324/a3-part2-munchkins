@@ -80,7 +80,7 @@ games_db: List[Tuple[int, str, int, str, str]] = [
     ),
     (
         2011,
-        "Arlington"
+        "Arlington",
         103219,
         "Green Bay Packers",
         "31-25",
