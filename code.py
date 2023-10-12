@@ -57,7 +57,7 @@ pa_list: List[Tuple[List[str], Callable[[List[str]], List[Any]]]] = [
 ]
 
 
-def search_pa_list(src: List[str]) -> List[str]:
+def search_pa_list(src: List[str]) -> str:
     for pat, act in pa_list:
         mat = match(pat,src)
         if mat is not None:
@@ -74,6 +74,10 @@ def query_loop() -> None:
             print()
             query = input("Your query? ").replace("?", "").lower().split()
             answers = search_pa_list(query)
+<<<<<<< HEAD
+=======
+            print(answers)
+>>>>>>> f00acaa3b967c05a4e9b1c87a9138375c6abbe24
 
         except (KeyboardInterrupt, EOFError):
             break
