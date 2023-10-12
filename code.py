@@ -82,6 +82,7 @@ def query_loop() -> None:
 
     print("\nSo long!\n")
 
+query_loop()
 
 assert winner_by_year(["2000"]) == "St.Louis Rams", "winner_by_year not working"
 assert city_by_year(["2007"]) == "Miami", "city_by_year not working"
