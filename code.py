@@ -74,10 +74,6 @@ def query_loop() -> None:
             print()
             query = input("Your query? ").replace("?", "").lower().split()
             answers = search_pa_list(query)
-<<<<<<< HEAD
-=======
-            print(answers)
->>>>>>> f00acaa3b967c05a4e9b1c87a9138375c6abbe24
 
         except (KeyboardInterrupt, EOFError):
             break
