@@ -51,7 +51,7 @@ def bye_action(dummy: List[str]) -> None:
 pa_list: List[Tuple[List[str], Callable[[List[str]], List[Any]]]] = [
     (str.split("who won the superbowl in _"), winner_by_year),
     (str.split("where was the superbowl in _"), city_by_year),
-    (str.split("what was the attendance at the _  superbowl"), attendance_by_year),
+    (str.split("what was the attendance at the _ superbowl"), attendance_by_year),
     (str.split("what was the final score of the _ superbowl"), score_by_year),
     (["bye"], bye_action),
 ]
@@ -74,8 +74,6 @@ def query_loop() -> None:
             print()
             query = input("Your query? ").replace("?", "").lower().split()
             answers = search_pa_list(query)
-            for ans in answers:
-                print(ans)
 
         except (KeyboardInterrupt, EOFError):
             break
