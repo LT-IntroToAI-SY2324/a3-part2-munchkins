@@ -68,14 +68,13 @@ def search_pa_list(src: List[str]) -> str:
 
 
 def query_loop() -> None:
-    print("Welcome to the movie database!\n")
+    print("Welcome to the SuperBowl database!\n")
     while True:
         try:
             print()
-            query = input("Your query? ").replace("?", "").lower().split()
-            answers = search_pa_list(query)
+            query = input("Your question? ").replace("?", "").lower().split()
+            answers =search_pa_list(query)
             print(answers)
-
         except (KeyboardInterrupt, EOFError):
             break
 
@@ -92,4 +91,7 @@ assert search_pa_list(["who", "won", "the", "superbowl", "in", "2020"]) == "Kans
 assert search_pa_list(["who", "are", "you"]) == ["I don't understand"], "search_pa_list test 3 not working"
 assert search_pa_list(["where", "was", "the", "superbowl", "in", "2032"]) == ["No answers"], "search_pa_list test 4 not working"
 assert search_pa_list(["who", "won", "the", "superbowl", "in", "2032"]) == ["No answers"], "search_pa_list test 5 not working"
+assert search_pa_list(["what", "was", "the", "attendance", "at", "the", "2020","superbowl"]) == 62417, "failed search_pa_list test 3"
+assert search_pa_list(["what", "was", "the", "final", "score", "of", "the", "2020", "superbowl" ]) == "31-20", "failed search_pa_list test 4"
+assert search_pa_list (["who","won","the","superbowl","in","2024"]) == ["No answers"], "failed search_pa_list test 5"
 print("all tests passed")
