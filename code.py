@@ -87,6 +87,7 @@ assert city_by_year(["2007"]) == "Miami", "city_by_year not working"
 assert attendance_by_year(["2016"]) == 71088, "atendance_by_year not working"
 assert score_by_year(["2021"]) == "31-9", "score_by_year not working"
 
-
-assert search_pa_list(["what", "was", "the", "final", "score", "of", "the", "2020", "superbowl" ]) == "31-20", "failed search_pa_list test 2"
+assert search_pa_list(["what", "was", "the", "attendance", "at", "the", "2020","superbowl"]) == 62417, "failed search_pa_list test 3"
+assert search_pa_list(["what", "was", "the", "final", "score", "of", "the", "2020", "superbowl" ]) == "31-20", "failed search_pa_list test 4"
+assert search_pa_list (["who","won","the","superbowl","in","2024"]) == ["No answers"], "failed search_pa_list test 5"
 print("all tests passed")
