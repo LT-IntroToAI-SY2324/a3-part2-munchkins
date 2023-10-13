@@ -68,11 +68,11 @@ def search_pa_list(src: List[str]) -> str:
 
 
 def query_loop() -> None:
-    print("Welcome to the movie database!\n")
+    print("Welcome to the SuperBowl database!\n")
     while True:
         try:
             print()
-            query = input("Your query? ").replace("?", "").lower().split()
+            query = input("Your question? ").replace("?", "").lower().split()
             answers =search_pa_list(query)
             print(answers)
         except (KeyboardInterrupt, EOFError):
@@ -86,4 +86,7 @@ assert winner_by_year(["2000"]) == "St.Louis Rams", "winner_by_year not working"
 assert city_by_year(["2007"]) == "Miami", "city_by_year not working"
 assert attendance_by_year(["2016"]) == 71088, "atendance_by_year not working"
 assert score_by_year(["2021"]) == "31-9", "score_by_year not working"
+
+
+assert search_pa_list(["what", "was", "the", "final", "score", "of", "the", "2020", "superbowl" ]) == "31-20", "failed search_pa_list test 2"
 print("all tests passed")
