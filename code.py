@@ -86,12 +86,14 @@ assert winner_by_year(["2000"]) == "St.Louis Rams", "winner_by_year not working"
 assert city_by_year(["2007"]) == "Miami", "city_by_year not working"
 assert attendance_by_year(["2016"]) == 71088, "atendance_by_year not working"
 assert score_by_year(["2021"]) == "31-9", "score_by_year not working"
+
+
 assert search_pa_list(["where", "was", "the", "superbowl", "in", "2010"]) == "Miami", "search_pa_list test 1 not working"
 assert search_pa_list(["who", "won", "the", "superbowl", "in", "2020"]) == "Kansas City Chiefs", "search_pa_list test 2 not working"
 assert search_pa_list(["who", "are", "you"]) == ["I don't understand"], "search_pa_list test 3 not working"
 assert search_pa_list(["where", "was", "the", "superbowl", "in", "2032"]) == ["No answers"], "search_pa_list test 4 not working"
 assert search_pa_list(["who", "won", "the", "superbowl", "in", "2032"]) == ["No answers"], "search_pa_list test 5 not working"
-assert search_pa_list(["what", "was", "the", "attendance", "at", "the", "2020","superbowl"]) == 62417, "failed search_pa_list test 3"
-assert search_pa_list(["what", "was", "the", "final", "score", "of", "the", "2020", "superbowl" ]) == "31-20", "failed search_pa_list test 4"
-assert search_pa_list (["who","won","the","superbowl","in","2024"]) == ["No answers"], "failed search_pa_list test 5"
+assert search_pa_list(["what", "was", "the", "attendance", "at", "the", "2020","superbowl"]) == 62417, "failed search_pa_list test 6"
+assert search_pa_list(["what", "was", "the", "final", "score", "of", "the", "2020", "superbowl" ]) == "31-20", "failed search_pa_list test 7"
+assert search_pa_list (["who","won","the","superbowl","in","2024"]) == ["No answers"], "failed search_pa_list test 8"
 print("all tests passed")
